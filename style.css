@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "HelveticaCompressed";
+  src: url("./Font/webfontkit-20240715-202458/helvetica_compressed_regular-webfont.woff2")
+      format("woff2"),
+    url("./Font//webfontkit-20240715-202458/helvetica_compressed_regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "HelveticaCompressed", sans-serif;
+}
+
+header {
+  position: relative;
+  background: url("./Assists/Hero-Image.png") no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0.8;
+  background: linear-gradient(101deg, #870000 0%, #190A05 99.55%);
+}
+.hero-section {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.container {
+  max-width: 95.625rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-navbar {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* .scrolled {
+  background-color: #cc1219;
+} */
+
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.nav-links {
+  display: flex;
+  max-width: 69.75rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  position: relative;
+  color: #fff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0.94rem;
+  padding: 0.38rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: none;
+  bottom: 0;
+  right: 0%;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0);
+}
+
+.nav-links a:hover::after {
+  transform: scale(1);
+}
+
+.nav-btn button {
+  position: relative;
+  display: flex;
+  padding: 0.75rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+  border: 1px solid #cc1219;
+  outline: none;
+  background: #cc1219;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.nav-btn button span {
+  z-index: 9999;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-btn button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-btn button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-btn button:hover span {
+  color: #cc1219;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content .hero-content-properties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 33.8rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content .hero-content-properties h1 {
+  color: #fff;
+  font-family: "HelveticaCompressed", sans-serif;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem;
+  margin: 0%;
+}
+
+.hero-content .hero-content-properties p {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 1.9rem 0;
+}
+
+.methodes {
+  padding: 6.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.methode-card {
+  position: relative;
+  max-width: 22.5rem;
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid #f1f1f1;
+  background: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.circle-icon {
+  display: flex;
+  width: 6.25rem;
+  height: 6.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: -3.12rem;
+  margin: 0% auto;
+}
+
+.methode-text {
+  margin: 5rem 0 0;
+  color: #000;
+}
+
+.methode-text h3 {
+  text-align: center;
+  font-family: "HelveticaCompressed";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+}
+
+.product-services {
+  display: flex;
+  padding: 6.25rem 0;
+  flex-direction: column;
+  background: #f6f9fc;
+}
+
+.product-services-h1 h1 {
+  color: #cc1219;
+  text-align: center;
+  font-family: "HelveticaCompressed";
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem; /* 116.667% */
+}
+
+.product-services-main-content {
+  margin-top: 4.06rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.88rem;
+}
+
+.product-services-card {
+  position: relative;
+  display: flex;
+  max-width: 30.625rem;
+  width: 100%;
+  padding: 1.875rem;
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: 0.9375rem;
+  border: 1px solid #f1f1f1;
+  background: #f9f9f9;
+}
+
+.product-services-card .service-icon {
+  display: flex;
+  width: 6.25rem;
+  height: 6.25rem;
+  padding: 1.56rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10.625rem;
+  background: #fff;
+  border: none;
+  margin-right: 1.88rem;
+}
+
+.product-services-card .Services-card-text h3 {
+  color: #000;
+  font-family: "HelveticaCompressed";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.product-services-card .Services-card-text p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 1.25rem 0 2.56rem;
+}
+
+.product-services-card .Services-card-text .prdocut-services-btn button {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  border-radius: 0rem 0rem 0.9375rem 0rem;
+  background: #cc1219;
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  display: flex;
+  padding: 0.625rem 1.5625rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.product-services-card .Services-card-text .prdocut-services-btn button span {
+}
+
+.product-services-card
+  .Services-card-text
+  .prdocut-services-btn
+  button:hover
+  span {
+  transform: translate(-100%);
+}
+
+.grid-margin-auto {
+  max-width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 1.88rem;
+}
+
+.grid-margin-auto .product-services-card {
+  margin: 0 0.94rem;
+}
+
+.about-us {
+  padding: 6.25rem 0;
+}
+
+.about-us-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us-main-content-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+  margin-right: 3.75rem;
+}
+
+.about-us-main-content-image img {
+  margin-left: 3.12rem;
+  z-index: 11;
+  animation: phil 3.5s infinite;
+}
+
+.about-us-main-content-image::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 94%;
+  border: 15px solid #cc1219;
+  top: 0%;
+  left: 0%;
+  z-index: -111111111;
+}
+
+.about-us-main-text h1 {
+  color: #cc1219;
+  font-family: "HelveticaCompressed";
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4.375rem; /* 116.667% */
+}
+
+.about-us-main-text p {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 1.2rem 0 1.88rem;
+}
+
+@keyframes phil {
+  0% {
+    transform: translateY(0);
+  } 50% {
+    transform: translate3d(-30px, 30px);
+  } 100% {
+    transform: translateY(0);
+  }
+}
